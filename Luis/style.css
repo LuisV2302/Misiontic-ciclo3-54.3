@@ -1,0 +1,20 @@
+div{
+    background:#1687a7;
+    border: 3px solid #276678;
+    border-radius: 6px; 
+}
+
+body{
+    background: #d3e0ea;
+    font-family: Arial;
+    font-size: 15px;
+}
+
+#espacio{
+ tab-size: 300px;
+ padding-left: 200px;
+ padding-right: 200px;
+}
+#registro{
+    align-self: flex-end;
+}

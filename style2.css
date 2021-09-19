@@ -1,0 +1,434 @@
+/**
+* Template Name: Medilab - v4.3.0
+* Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+body {
+    font-family: "Open Sans", sans-serif;
+    color: #444444;
+    background-color: #F6F5F5;
+  }
+  
+  a {
+    color: #1977cc;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #3291e6;
+    text-decoration: none;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+  }
+  h3{
+      padding: 0px 0px 0px 15px;
+      font-size: 130%;
+      color: #022731;
+  }
+  
+  /*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+  #header {
+    background: #ffffff;
+    transition: all 0.5s;
+    z-index: 997;
+    padding: 15px 0;
+    top: 40px;
+    box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
+  }
+  
+  #header .h_container{
+    flex: auto; 
+    align-items: center;
+  }
+
+  #header.header-scrolled {
+    top: 0;
+  }
+  
+  .imga{
+      width: 100px;
+      height: 100px;
+      padding-left: 20px;
+  }
+
+  /*--------------------------------------------------------------
+  # Navigation Menu
+  --------------------------------------------------------------*/
+  /**
+  * Desktop Navigation 
+  */
+  .navbar {
+    padding: 30px 60px 0px 0px;
+    float: right;
+  }
+  
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+  
+  .navbar li {
+    position: relative;
+  }
+  
+  .navbar > ul > li {
+    position: relative;
+    white-space: nowrap;
+    padding: 8px 0 8px 20px;
+  }
+  
+  .navbar a, .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #276678;
+    white-space: nowrap;
+    transition: 0.3s;
+    border-bottom: 2px solid #fff;
+    padding: 5px 2px;
+  }
+  
+  /*--------------------------------------------------------------
+  # Sections General
+  --------------------------------------------------------------*/
+  section {
+    padding: 20px 0;
+    overflow: hidden;
+  }
+  
+  .profile .container{
+    margin: auto;
+    height: 210px;
+    top: 40px;
+    box-shadow: 0px 0px 6px 3px rgba(25, 119, 204, 0.1);
+  }
+
+  .profile .container .profile{
+    /*top  right bottom left*/
+    padding-left: 35px;
+    margin-right: 12px;
+    float: left;
+    width: 190px;
+    height: 190px;
+
+}
+
+.profile .container .texto{
+    padding: 75px 0px 0px 250px;
+    font-size: 250%;
+    font-family: sans-serif;
+    color: #022731;
+    font-weight: lighter;
+}
+
+.users{
+    margin: auto;
+    margin-top: 20px;
+    top: 40px;
+    box-shadow: 0px 0px 6px 3px rgba(25, 119, 204, 0.1);
+    width: 630px;
+    height: 400px;
+    float: left;
+} 
+
+.Info{
+    width: 600px;
+    height: 300px;
+}
+.users .Info .container{
+    height: 290px;
+    margin-left: 10px;
+    overflow:auto;
+}
+
+.users .Info .container .lista{
+    list-style: none;
+    width: 550px;
+    padding-left: 20px;
+    font-weight: bold;
+}
+.users .Info .container .lista #descripcion{
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 30px;
+    font-weight: lighter;
+}
+.photo{
+    margin: auto;
+    top: 40px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 6px 3px rgba(25, 119, 204, 0.1);
+    width: 635px;
+    height: 400px;
+    float: right;
+}
+
+.place{
+    width: 600px;
+    height: 300px;
+}
+
+.photo_place{
+  font-size: 16px;
+}
+.score{
+    box-sizing: border-box;
+    font-family: Arial;
+    margin: 0 auto; /* Center website */
+    max-width: 800px; /* Max width */
+    padding: 20px;
+    box-shadow: 0px 0px 6px 3px rgba(25, 119, 204, 0.1);
+    height: 300px;
+    width: 660px;
+    margin-top: 450px;
+}
+
+.score .row{
+    width: 600px;
+    height: 200px;
+}
+
+.barrita{
+    border: 3px solid #f1f1f1;
+    width: 620px;
+}
+.heading {
+    font-size: 25px;
+    margin-right: 25px;
+  }
+  
+  .fa {
+    font-size: 25px;
+  }
+  
+  .checked {
+    color: orange;
+  }
+  
+  /* Three column layout */
+  .side {
+    float: left;
+    width: 15%;
+    margin-top: 10px;
+  }
+  
+  .middle {
+    float: left;
+    width: 70%;
+    margin-top: 10px;
+  }
+  
+  /* Place text to the right */
+  .right {
+    text-align: right;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* The bar container */
+  .bar-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Individual bars */
+  .bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
+  .bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+  .bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+  .bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+  .bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+  
+  #principal{
+    align-self: center;
+    width: 60%; 
+    background:#d3e0ea;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#login{
+    width: 25%;
+    left: 0%;
+    margin-right: 20%;
+}
+
+#registro{
+    align-self: right;
+    width: 25%;
+    right: 0%;
+    margin-left: 20%;
+}
+   
+#busqueda{
+    right: 0%;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+
+#presentación{
+    align-content: justify;
+    width: 60%;
+    margin-top: 20%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 20%;
+    background: #1687a7;
+    border-radius: 10px;
+}
+
+.descripcion{
+    padding: 10px;
+}
+
+.cabecera{
+  text-align: center;
+  font-family: monospace;
+  font-size: 40px;
+  width: 100%;
+}
+
+#cuadro-inicio{
+  align-content: center;
+  width: 50%;
+  height: 100%;
+  margin-top: 10%;
+  margin-left: 20%;
+  margin-right: 10%;
+  margin-bottom: 20%;
+  background: #1687a7;
+  border-radius: 10px;
+  padding: 2%;
+}
+#contraseña{
+  width: 30%;
+  height: 30%;
+  margin-top: 30%;
+  margin-left: 10%;
+  margin-bottom: 10%;
+}
+#usuario{
+
+  width: 30%;
+  height: 30%;
+  margin-top: 30%;
+  margin-right: 20%;
+  margin-bottom: 10%;
+}
+#titulo{
+  align-self: center;
+  margin-left: 40%;
+  margin-right: 25%;
+  margin-bottom: 25%;
+}
+  /*--------------------------------------------------------------
+  # Breadcrumbs
+  --------------------------------------------------------------*/
+  .breadcrumbs {
+    padding: 20px 0;
+    background-color: #D3E0EA;
+    min-height: 40px;
+  }
+
+  .breadcrumbs .container .barra{
+    flex: auto; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px 0px 30px;
+  }
+  
+  .breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .breadcrumbs ol li + li {
+    padding-left: 10px;
+  }
+  
+  .breadcrumbs ol li + li::before {
+    display: inline-block;
+    padding-right: 10px;
+    color: #276678;
+    content: "/";
+  }
+  
+  /*--------------------------------------------------------------
+  # Footer
+  --------------------------------------------------------------*/
+  #footer {
+    color: #276678;
+    font-size: 14px;
+    background: #D3E0EA;
+    align-items: center;
+  }
+  
+  #footer .footer-top {
+    padding: 20px 0 30px 0;
+    background: #ffffff;
+    box-shadow: 0px 2px 15px rgba(25, 119, 204, 0.1);
+  }
+  
+  #footer .footer-top .footer-contact_col-3{
+    padding: 0px 0px 0px 20px;
+    margin: 30px 0px 0px 0px;
+  }
+
+  #footer .footer-top .footer-contact_col-3 .Email{
+    padding-left: 15px;
+  }
+
+  .container_footer{
+    display: flex;
+    background-position-y: 4px;
+    margin: 40px 0px 0px 0px;
+    
+  }
+
+  .container_footer .copyr{
+    margin-inline-end: auto;
+    text-align: center; 
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: 26px;
+    color: #276678;
+  }
+  .container_footer .copyr .Copyright{
+    display:inline-block;
+  }

@@ -1,0 +1,28 @@
+.Cuerpo{
+    background-color: #1687A7;
+}
+
+div.conta{
+  background-color: #F6F5F5;
+  width: 1350px;
+  height: 220px;
+}
+div.conta img.profile{
+           /*Up right down left*/
+    padding: 20px 0px 0px 35px;
+    margin-right: 12px;
+    float: left;
+}
+
+div.conta aside.texto{
+    padding-top: 80px;
+    font-size: 200%;
+    font-family: sans-serif;
+}
+
+.titulo .ti {
+  padding-top: 10px;
+  text-align: center;
+  margin: 20px;
+  font-size: 300%;
+}

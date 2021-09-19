@@ -30,6 +30,7 @@ body{
 #busqueda{
     right: 0%;
     margin-bottom: 5%;
+    margin-top: 5%;
 }
 
 a.button {
@@ -54,4 +55,45 @@ a.button {
 
 .descripcion{
     padding: 10px;
+}
+
+.cabecera{
+  text-align: center;
+  font-family: monospace;
+  font-size: 40px;
+  width: 100%;
+}
+
+#cuadro-inicio{
+  align-content: center;
+  width: 50%;
+  height: 100%;
+  margin-top: 10%;
+  margin-left: 20%;
+  margin-right: 10%;
+  margin-bottom: 20%;
+  background: #1687a7;
+  border-radius: 10px;
+  padding: 2%;
+}
+#contraseña{
+  width: 30%;
+  height: 30%;
+  margin-top: 30%;
+  margin-left: 10%;
+  margin-bottom: 10%;
+}
+#usuario{
+
+  width: 30%;
+  height: 30%;
+  margin-top: 30%;
+  margin-right: 20%;
+  margin-bottom: 10%;
+}
+#titulo{
+  align-self: center;
+  margin-left: 40%;
+  margin-right: 25%;
+  margin-bottom: 25%;
 }

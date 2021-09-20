@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0075)https://blog.elcodiguero.com/archivos/mostrar_ocultar_elemento/ejemplo.html -->
+<html xml:lang="es" xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Ejemplo de 'display' y 'visibility' con Javascript</title>
+<style type="text/css">
+                        body {
+                                font-family : Verdana, sans-serif;
+                        }
+
+                        h1 {
+                                text-align : center;
+                                border-bottom : 1px solid teal;
+                                width : 90%;
+                                margin : 1em auto;
+                        }
+
+                        a {
+                                color : blue;
+                                text-decoration : underline;
+                        }
+
+                        a:hover {
+                                text-decoration : none;
+                        }
+
+                        span {
+                                font-weight : bold;
+                        }
+
+                        #contenedor {
+                                border : 1px solid navy;
+                                width : 60%;
+                                margin-left : auto;
+                                margin-right : auto;
+                                padding : 1em;
+                                background : rgb(240, 255, 255);
+                        }
+
+                        #objeto {
+                                padding : 1em;
+                                background-color : olive;
+                                text-align : center;
+                                font-weight : bold;
+                        }
+                </style>
+<script type="text/javascript">
+                        var div;
+                        var span_display;
+                        var span_visibility;
+                        window.onload = function() {
+                                div = document.getElementById('objeto');
+                                div.style.display = 'block';
+                                div.style.visibility = 'visible';
+                                span_display = document.getElementById('span_display');
+                                span_visibility = document.getElementById('span_visibility');
+                        }
+
+                        function cambiarEstilo(propiedad, valor) {
+                                div.style[propiedad] = valor;
+                                actualizarValoresMostrados();
+                        }
+
+                        function actualizarValoresMostrados() {
+                                span_display.innerText = div.style.display;
+                                span_visibility.innerText = div.style.visibility;
+                        }
+
+
+
+                </script>
+
+</head>
+<body>
+<h1>Ejemplo de 'display' y 'visibility'</h1>
+<div id="contenedor">
+<div id="objeto" style="display: none; visibility: visible;">Sobre este objeto se aplican los cambios a 'display' y a 'visibility'</div>
+</div>
+<p>Activa los enlaces para ver el efecto de los diferentes valores posibles de 'display' y 'visibility'</p>
+<ul>
+<li><a href="javascript:cambiarEstilo(&#39;display&#39;, &#39;none&#39;)">Cambiar 'display' a 'none'</a>: El elemento desaparece, y deja de ocupar espacio.</li>
+<li><a href="javascript:cambiarEstilo(&#39;display&#39;, &#39;block&#39;)">Cambiar 'display' a 'block'</a>: El elemento se convierte en una caja</li>
+<li><a href="javascript:cambiarEstilo(&#39;display&#39;, &#39;inline&#39;)">Cambiar 'display' a 'inline'</a>: El elemento se convierte en un elemento en línea: pierde sus propiedades de 'caja'</li>
+<li><a href="javascript:cambiarEstilo(&#39;visibility&#39;, &#39;hidden&#39;)">Cambiar 'visibility' a 'hidden'</a>: El elemento sigue ocupando el mismo espacio que antes en la página, pero ya no se ve.</li>
+<li><a href="javascript:cambiarEstilo(&#39;visibility&#39;, &#39;visible&#39;)">Cambiar 'visibility' a 'visible'</a>: El elemento se muestra.</li>
+</ul>
+<p>Valor actual de display : <span id="span_display">none</span><br>
+Valor actual de visibility : <span id="span_visibility">visible</span></p>
+
+
+</body></html>

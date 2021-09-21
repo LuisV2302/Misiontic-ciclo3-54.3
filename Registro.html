@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style2.css">
+    <title>Registro</title>
+</head>
+<body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div class="h_container">
+          <a href="inicio.html"><img src="favicon.png" alt="Logo" class="imga"></a>
+          <nav id="navb" class="navbar">
+            <ul>
+              <li><a class="nav-link scrollto" href="#index">Home</a></li>
+              <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            </ul>
+          </nav><!-- .navbar -->
+        </div>
+    </header><!-- End Header -->
+
+    <div>
+        <div id="cuadro-registro">
+              <h2>Registro</h2>
+                <form>
+                    <div>
+                        <input type="text" name="name" id="User" placeholder="Nombre de usuario" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                      </div>
+                      <div>
+                        <input type="email" name="email" id="correo" placeholder="correo" data-rule="email" data-msg="Please enter a valid email" />
+                      </div>
+                    <div class="form-group">
+                      <input type="text" name="subject" id="nombres" placeholder="Nombre" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" id="apellidos" placeholder="Apellidos" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" id="telefono" placeholder="teléfono" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                    </div>
+                    <div>
+                        <input type="text" name="subject" id="telefono" placeholder="teléfono" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                    </div>
+                    <div >
+                      <input type="text" name="tipoSangre" id="tipoSangre" placeholder="Tipo de sangre" data-rule="minlen:2" data-msg="Please enter at least 8 chars of subject" />
+                    </div>
+                    <br>
+                   
+                </form>
+                <label for="rol">Selecciona tu rol: </label>
+                <select name="rol" id="rol">
+                  <option value="">--selecciona una opción--</option>
+                  <option value="paciente">Paciente</option>
+                  <option value="medico">Médico</option>
+                </select>
+                <form id="formularioMedico">
+                  <div >
+                    <input type="text" name="direccion" id="direccion" placeholder="Dirección consultorio" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  </div>
+                  <div >
+                    <input type="text" name="telefonoConsultorio" id="TelefonoConsultorio" placeholder="Telefono consultorio" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  </div>
+                  <div >
+                    <input type="text" name="especialidad" id="especialidad" placeholder="Especialidad" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  </div>
+                </form>
+                
+    </div>
+    <script>
+      let seleccionar = document.querySelector('select');
+
+seleccionar.addEventListener('change', establecerClima);
+
+function establecerClima() {
+  let eleccion = seleccionar.value;
+
+  if (eleccion === 'paciente') {
+    document.getElementById('formularioMedico').style.display = 'none';
+  } else if (eleccion === 'medico') {
+    document.getElementById('formularioMedico').style.display = 'block';
+  }else if(eleccion === '') {
+    document.getElementById('formularioMedico').style.display = 'none';
+  }
+}
+    </script>
+        <!-- ======= Footer ======= -->
+<footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="footer-contact_col-3">
+            <h3>Medictorio</h3>
+            <p class = "Email">
+              <strong>Email:</strong> medicotorio@gmail.com<br>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container_footer">
+      <div class="copyr">
+        <div class="Copyright">
+          &copy; Copyright <strong><span>Medictorio</span></strong>. All Rights Reserved
+
+        </div>
+        <a href="preguntasfrecuentes.html">Preguntas frecuentes</a>
+        <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- End Footer -->
+</body>
+
+</html>

@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style2.css">
     <title>Registro</title>
-    <script src="script.js"></script>
 </head>
 <body>
     <!-- ======= Header ======= -->
@@ -44,6 +43,9 @@
                     <div>
                         <input type="text" name="subject" id="telefono" placeholder="teléfono" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                     </div>
+                    <div >
+                      <input type="text" name="tipoSangre" id="tipoSangre" placeholder="Tipo de sangre" data-rule="minlen:2" data-msg="Please enter at least 8 chars of subject" />
+                    </div>
                     <br>
                    
                 </form>
@@ -57,21 +59,27 @@
                   <div >
                     <input type="text" name="direccion" id="direccion" placeholder="Dirección consultorio" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
                   </div>
+                  <div >
+                    <input type="text" name="TelefonoConsultorio" id="TelefonoConsultorio" placeholder="Telefono consultorio" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                  </div>
                 </form>
-                <p id="prueba">HOLA</p>
                 
     </div>
     <script>
-      function mostrarformulario(id){ 
-        var a = document.getElementById('rol').value;
-        if(a == 'paciente'){
-          document.getElementById('fomularioMedico').style.display = 'block';
-        } else if (a == "medico"){
-          document.getElementById('fomularioMedico').style.display = 'block';
-        } else {
-          document.getElementById('prueba').style.display = "none";
-        }
+      let seleccionar = document.querySelector('select');
 
+seleccionar.addEventListener('change', establecerClima);
+
+function establecerClima() {
+  let eleccion = seleccionar.value;
+
+  if (eleccion === 'paciente') {
+    document.getElementById('formularioMedico').style.display = 'none';
+  } else if (eleccion === 'medico') {
+    document.getElementById('formularioMedico').style.display = 'block';
+  }else if(eleccion === '') {
+    document.getElementById('formularioMedico').style.display = 'none';
+  }
 }
     </script>
         <!-- ======= Footer ======= -->

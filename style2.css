@@ -288,5 +288,9 @@ a.button {
   }
 
 #formularioMedico{
-  display: none;
+  visibility: none;
+}
+
+#prueba{
+  visibility: none;
 }

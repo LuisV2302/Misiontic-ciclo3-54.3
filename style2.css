@@ -12,7 +12,11 @@ body {
     font-family: "Open Sans", sans-serif;
     color: #444444;
     background-color: #F6F5F5;
+<<<<<<< Updated upstream
     background-image: url("img/hero-bg.jpg");
+=======
+    background-image: url("hero-bg.jpg");
+>>>>>>> Stashed changes
     background-repeat:no-repeat;
     background-position: bottom;
     background-attachment: fixed;

@@ -49,10 +49,13 @@
               class="nav-item"
       >
         <nav-link to="/Singup">
-          <i class=""></i> Sign up
+          <i class="now-ui-icons emoticons_satisfied"></i> Sign up
         </nav-link>
         <nav-link to="/login">
-          <i class=""></i> Login
+          <i class="now-ui-icons users_single-02"></i> Login
+        </nav-link>
+        <nav-link to="/administracion">
+          <i class="now-ui-icons education_agenda-bookmark"></i> Administrar agenda
         </nav-link>
       </drop-down>
       <li class="nav-item">

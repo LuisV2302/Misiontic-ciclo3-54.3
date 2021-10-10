@@ -83,14 +83,25 @@
 
     .page-header{
         min-height: 550px;
+<<<<<<< HEAD
+        background: rgb(22,135,167);
+        background: linear-gradient(rgba(22,135,167,1) 0%,
+         rgba(211,224,234,1) 50%, rgba(246,245,245,1) 100%);
+=======
+>>>>>>> 38661b19cbc8db5eb9bfe11a9cbc8d67e7c9090e
     }
 
     .profile-container{
         color: #FFFFFF;
     }
     .photo-container{
+<<<<<<< HEAD
+        width: 200px;
+        height: 200px;
+=======
         width: 123px;
         height: 123px;
+>>>>>>> 38661b19cbc8db5eb9bfe11a9cbc8d67e7c9090e
         border-radius: 50%;
         overflow: hidden;
         margin: 0 auto;
@@ -128,7 +139,13 @@
             margin: 15px 0 0px;
 
             h2{
+<<<<<<< HEAD
+                margin-bottom: 5px;
+                margin-top: 10px;
+                font-size: 190%;
+=======
                 margin-bottom: 15px;
+>>>>>>> 38661b19cbc8db5eb9bfe11a9cbc8d67e7c9090e
             }
         }
     }

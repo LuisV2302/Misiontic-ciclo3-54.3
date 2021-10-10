@@ -92,7 +92,11 @@ p{
 .description,
 .card-description,
 .footer-big p{
+<<<<<<< HEAD
+    color: rgb(0, 0, 0);
+=======
     color: $dark-gray;
+>>>>>>> 38661b19cbc8db5eb9bfe11a9cbc8d67e7c9090e
     font-weight: $font-weight-light;
 }
 .category{

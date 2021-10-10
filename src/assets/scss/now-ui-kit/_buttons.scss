@@ -81,7 +81,11 @@
 
 // Apply the mixin to the buttons
 // .btn-default { @include btn-styles($default-color, $default-states-color); }
+<<<<<<< HEAD
+.btn-primary { @include btn-styles(rgb(22,135,167), rgb(22,135,167)); }
+=======
 .btn-primary { @include btn-styles($primary-color, $primary-states-color); }
+>>>>>>> 38661b19cbc8db5eb9bfe11a9cbc8d67e7c9090e
 .btn-success { @include btn-styles($success-color, $success-states-color); }
 .btn-info    { @include btn-styles($info-color, $info-states-color); }
 .btn-warning { @include btn-styles($warning-color, $warning-states-color); }
@@ -200,3 +204,10 @@
     color: $social-linkedin !important;
   }
 }
+<<<<<<< HEAD
+
+.cita{
+    color: #276678;
+}
+=======
+>>>>>>> 38661b19cbc8db5eb9bfe11a9cbc8d67e7c9090e

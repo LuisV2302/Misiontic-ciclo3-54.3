@@ -26,7 +26,11 @@
       <li class="nav-item">
         <a
           class="nav-link"
+<<<<<<< HEAD
           href="#/"
+=======
+          href="#/home"
+>>>>>>> 1938553afd214f18f2f85c9e53b90d6e6f4aaa72
           target="_blank"
         >
           <i class=""></i>
@@ -49,6 +53,7 @@
               class="nav-item"
       >
         <nav-link to="/Singup">
+<<<<<<< HEAD
           <i class="now-ui-icons emoticons_satisfied"></i> Sign up
         </nav-link>
         <nav-link to="/login">
@@ -56,12 +61,22 @@
         </nav-link>
         <nav-link to="/administracion">
           <i class="now-ui-icons education_agenda-bookmark"></i> Administrar agenda
+=======
+          <i class=""></i> Sign up
+        </nav-link>
+        <nav-link to="/login">
+          <i class=""></i> Login
+>>>>>>> 1938553afd214f18f2f85c9e53b90d6e6f4aaa72
         </nav-link>
       </drop-down>
       <li class="nav-item">
         <a
           class="nav-link btn btn-neutral"
+<<<<<<< HEAD
           href="#/reservar"
+=======
+          href=""
+>>>>>>> 1938553afd214f18f2f85c9e53b90d6e6f4aaa72
           target="_blank"
         >
           <i class=""></i>

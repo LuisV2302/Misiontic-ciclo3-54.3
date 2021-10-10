@@ -26,7 +26,11 @@
       <li class="nav-item">
         <a
           class="nav-link"
+<<<<<<< HEAD
           href="#/"
+=======
+          href="#/inicio"
+>>>>>>> 1938553afd214f18f2f85c9e53b90d6e6f4aaa72
           target="_blank"
         >
           <i class=""></i>
@@ -54,6 +58,12 @@
         <nav-link to="/login">
           <i class="now-ui-icons users_single-02"></i> Login
         </nav-link>
+<<<<<<< HEAD
+=======
+        <nav-link to="/administracion">
+          <i class="now-ui-icons education_agenda-bookmark"></i> Administrar agenda
+        </nav-link>
+>>>>>>> 1938553afd214f18f2f85c9e53b90d6e6f4aaa72
       </drop-down>
       <li class="nav-item">
         <a

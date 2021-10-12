@@ -13,8 +13,8 @@
         <p class="category">Dermatologo</p>
         <div class="content">
           <div class="social-description">
-            <h2>4,5</h2>
-            <p>Calificación</p>
+            <h2>40000</h2>
+            <p>Precio de la cita</p>
           </div>
         </div>
       </div>

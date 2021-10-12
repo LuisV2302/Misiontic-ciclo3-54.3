@@ -3,11 +3,11 @@ import Router from 'vue-router';
 import Profile from './pages/Perfil_medico.vue';
 import ProfileP from './pages/Perfil_paciente.vue';
 import Admin from './pages/Admin.vue';
-import Register from './pages/Register.vue';
+/*import Register from './pages/Register.vue';
 import Inicio from './pages/Inicio.vue';
 import Login from './pages/Login.vue';
 import listamedicos from './pages/listamedicos.vue';
-import reservar from './pages/reservar.vue';
+import reservar from './pages/reservar.vue';*/
 import MainNavbar from './layout/MainNavbar.vue';
 import MainNavbarMedico from './layout/MainNavbarMedico.vue';
 import MainFooter from './layout/MainFooter.vue';
@@ -18,7 +18,7 @@ Vue.use(Router);
 export default new Router({
   linkExactActiveClass: 'active',
   routes: [
-    {
+    /*{
       path: '/',
       name: 'inicio',
       components: { default: Inicio, header: MainNavbar, footer: MainFooter },
@@ -42,7 +42,7 @@ export default new Router({
       props: {
         header: { colorOnScroll: 400 }
       }
-    },
+    },*/
     {
       path: '/perfil_medico',
       name: 'profile',
@@ -69,7 +69,7 @@ export default new Router({
         header: { colorOnScroll: 400 },
         footer: { backgroundColor: 'black' }
       }
-    },
+    }/*,
     {
       path: '/reservar',
       name: 'reservar',
@@ -87,7 +87,7 @@ export default new Router({
         header: { colorOnScroll: 400 }
     
       }
-    }
+    }*/
   ],
   scrollBehavior: to => {
     if (to.hash) {

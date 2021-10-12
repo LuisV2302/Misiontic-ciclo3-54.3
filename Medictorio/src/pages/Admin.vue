@@ -7,6 +7,14 @@
             <vue-timepicker class="Hora" :format="yourFormat" v-model="unsetStringValue" placeholder="Start Time"></vue-timepicker>
             <span class="thi"> Hasta </span>
             <vue-timepicker class="Hora" :format="yourFormat" v-model="unsetStringValue" placeholder="End Time"></vue-timepicker>
+            <div class="container-fluid">
+              <h4 id="h4x">Valor minimo</h4>
+              <input id="Precio"
+              class="no-border show-input input-lg"
+              addon-left-icon="now-ui-icons text_caps-small"
+              placeholder="Precio de la cita"
+            > 
+            </div>
         </div>
       <div class="container">
         <vue-cal id="calendario" selected-date="2021-09-29" :time-from="5 * 60" :time-to="22 * 60" 
@@ -84,5 +92,8 @@ export default {
 }
 .thi{
   padding: 0px 10px 0 10px;
+}
+#Precio{
+  width: 87%;
 }
 </style>

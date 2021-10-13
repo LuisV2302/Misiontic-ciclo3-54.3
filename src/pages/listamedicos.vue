@@ -8,29 +8,21 @@
       </parallax>
        <div class="content-center">
       <div class="container">
-      
-
           <h1 class="h1-seo">Dermatología</h1>
-     
- <h3>Elige tu mejor opción</h3>
- <h3> Cudad
+            <h3>Elige tu mejor opción</h3>
+            <h3> Cudad
                 <select name="Ciudad" style="color:gray;font-size:18px;">
                     <option>Bogotá</option>
                     <option>Cali</option>
                     <option>Medellín</option>
                 </select>
-           
-
-           
-                Calificación
+                    Calificación
                 <select name="Calificación" style="color:gray;font-size:18px;">
                     <option>1 estrella</option>
                     <option>2 estrellas</option>
                     <option>3 esstrellas</option>
                 </select>
-           
             Precios
-            
                 <select name="Precios" style="color:gray;font-size:18px;">
                  
                     <option >  $100.000-$200.000 </option>
@@ -40,14 +32,7 @@
                 </select>
                 
                 <input type="submit" value="buscar" style="color:gray;font-size:18px;">
-            
            </h3>
-                
-
-      
-    
-        
-       
       </div>
       </div>
     </div>

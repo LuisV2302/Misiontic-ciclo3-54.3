@@ -9,11 +9,10 @@
         <div class="photo-container">
           <img src="img/pp.jpg" id="pp" alt="pp" />
         </div>
-        <h3 class="title">Medico123</h3>
-        <p class="category">Dermatologo</p>
+        <h3 class="title"> {{ Medicodata.nombre }}</h3>
         <div class="content">
-          <div class="social-description">
-            <h2>40000</h2>
+          <div v-for="precio in Preciodata" :key="precio.id" class="social-description">
+            <h2 >{{ precio.precio }}</h2>
             <p>Precio de la cita</p>
           </div>
         </div>
@@ -25,27 +24,23 @@
                 <ul class="list-group row" id="Lista">
                     <span id="usuarios">Especialidad</span>
                      <li class="list-group-item col-6 embed-responsive" id="Elementos">
-                        Dermatología
+                        {{ Medicodata.especialidad }}
                      </li>
                      <span id="usuarios">Email</span>
                      <li class="list-group-item col-6 embed-responsive" id="Elementos">
-                        Medico@gmail.com
+                        {{ Medicodata.correo }}
                      </li >
                       <span id="usuarios">Ciudad</span>
                      <li class="list-group-item col-6 embed-responsive" id="Elementos">
-                        Medellín
+                        {{ Medicodata.ciudad }}
                      </li>
-                     <span id="usuarios">Rol</span>
-                        <li class="list-group-item col-6 embed-responsive" id="Elementos">
-                           Medico
-                        </li>
                       <span id="usuarios">Celular </span>
                         <li class="list-group-item col-6 embed-responsive" id="Elementos">
-                          312741243
+                          {{ Medicodata.telefono }}
                         </li>
                       <span id="usuarios">Dirección Consultorio</span>
                         <li class="list-group-item col-6 embed-responsive" id="Elementos">
-                          Calle 95 #12 - 110
+                          {{ Medicodata.direccion }}
                         </li>
                   </ul>
         <div class="row">
@@ -82,14 +77,32 @@
 </template>
 <script>
 import { Tabs, TabPane } from '@/components';
-
+import axios from 'axios';
 export default {
   name: 'profile',
   bodyClass: 'profile-page',
   components: {
     Tabs,
     TabPane
-  }
+  },
+  props:['idMedico','precio'],
+  data (){
+        return {
+        Medicodata: '',
+        Preciodata:'',
+        }
+    },
+  created(){ 
+    let idmedico1 = '6166eb68fb4a711eda8f8777'; //id prueba
+    
+    //alert("id del medico " + idmedico2);
+    axios.get("http://localhost:8000/medicos/buscarPorId/"+idmedico1)
+    .then((res) => {this.Medicodata = res.data
+    }).catch((error) => console.log(error));
+    axios.get("http://localhost:8000/citas/buscarPorMedicoId/"+idmedico1)
+    .then((resp) => {this.Preciodata = resp.data
+    }).catch((error) => console.log(error));
+    }
 };
 </script>
 <style>

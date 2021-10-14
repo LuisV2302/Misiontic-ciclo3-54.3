@@ -9,7 +9,7 @@
         <div class="photo-container">
           <img src="img/ppp.jpg" id="pp" alt="pp" />
         </div>
-        <h3 class="title">Paciente Apellido</h3>
+        <h3 class="title">{{Pacientedata.nombre}}</h3>
         <p class="category">Usuario</p>
         <div class="content">
         </div>
@@ -21,27 +21,23 @@
                 <ul class="list-group row" id="Lista">
                     <span id="usuarios">Tipo de sangre</span>
                      <li class="list-group-item col-6 embed-responsive" id="Elementos">
-                        O+
+                        {{Pacientedata.tipoSangre}}
                      </li>
                      <span id="usuarios">Email</span>
                      <li class="list-group-item col-6 embed-responsive" id="Elementos">
-                        Paciente123@gmail.com
+                        {{Pacientedata.correo}}
                      </li >
                       <span id="usuarios">Ciudad</span>
                      <li class="list-group-item col-6 embed-responsive" id="Elementos">
-                        Bogota
+                        {{Pacientedata.ciudad}}
                      </li>
-                     <span id="usuarios">Rol</span>
-                        <li class="list-group-item col-6 embed-responsive" id="Elementos">
-                           Paciente
-                        </li>
                       <span id="usuarios">Celular </span>
                         <li class="list-group-item col-6 embed-responsive" id="Elementos">
-                          300231243
+                          {{Pacientedata.telefono}}
                         </li>
                       <span id="usuarios">Dirección Consultorio</span>
                         <li class="list-group-item col-6 embed-responsive" id="Elementos">
-                          Calle 25 #12 - 80
+                          {{Pacientedata.direccion}}
                         </li>
                   </ul>
         <div class="row">
@@ -55,21 +51,18 @@
                             <th scope="col">#</th>
                             <th scope="col"><strong>Especialidad</strong></th>
                             <th scope="col"><strong>Fecha y hora</strong></th>
-                            <th scope="col"><strong>Medico</strong></th>
                         </tr>
               </thead>
-              <tbody>
+              <tbody v-for="cita in Citadata" :key="cita.id"> 
                         <tr>
                             <th scope="row">1</th>
-                            <td>Dermatología</td>
-                            <td>12/08/21 12:30 pm</td>
-                            <td>Medico Dermatologo</td>
+                            <td >{{cita.area}}</td>
+                            <td>{{cita.fecha}}</td>
                         </tr>
                         <tr>
                             <th scope="row">2</th>
-                            <td>Neurología</td>
-                            <td>27/11/20 09:00 am</td>
-                            <td>Medico Neurologo</td>
+                            <td>{{cita.area}}</td>
+                            <td>{{cita.fecha}}</td>
                         </tr>
               </tbody>
             </table>
@@ -80,11 +73,28 @@
   </div>
 </template>
 <script>
-
+import axios from 'axios';
 export default {
   name: 'profile',
   bodyClass: 'profile-page',
   components: {
+  },props:['idPaciente'],
+  data (){
+        return {
+        Pacientedata: '',
+        Citadata: null
+        }
+    },
+  created(){ 
+    let idpaciente1 = '61678dc3225c2453eff2d78f'; //id prueba
+    //alert("id del medico " + idmedico2);
+    axios.get("http://localhost:8000/pacientes/buscarPorId/"+idpaciente1)
+    .then((res) => {this.Pacientedata = res.data
+    }).catch((error) => console.log(error));
+
+    axios.get("http://localhost:8000/citas/buscarPorPacienteId/"+idpaciente1)
+    .then((resp) => {this.Citadata = resp.data
+    }).catch((error) => console.log(error));
   }
 };
 </script>

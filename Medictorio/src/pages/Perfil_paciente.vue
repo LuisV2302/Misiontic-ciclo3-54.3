@@ -53,15 +53,10 @@
                             <th scope="col"><strong>Fecha y hora</strong></th>
                         </tr>
               </thead>
-              <tbody v-for="cita in Citadata" :key="cita.id"> 
+              <tbody v-for="(cita,i) in Citadata" :key="cita.id"> 
                         <tr>
-                            <th scope="row">1</th>
+                            <th scope="row">{{i+1}}</th>
                             <td >{{cita.area}}</td>
-                            <td>{{cita.fecha}}</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>{{cita.area}}</td>
                             <td>{{cita.fecha}}</td>
                         </tr>
               </tbody>
@@ -86,13 +81,13 @@ export default {
         }
     },
   created(){ 
-    let idpaciente1 = '61678dc3225c2453eff2d78f'; //id prueba
+    let idpaciente1 = '6168a6d3bf31c35394525dc9'; //id prueba
     //alert("id del medico " + idmedico2);
-    axios.get("http://localhost:8000/pacientes/buscarPorId/"+idpaciente1)
+    axios.get("http://localhost:3000/pacientes/buscarPorId/"+idpaciente1)
     .then((res) => {this.Pacientedata = res.data
     }).catch((error) => console.log(error));
 
-    axios.get("http://localhost:8000/citas/buscarPorPacienteId/"+idpaciente1)
+    axios.get("http://localhost:3000/citas/buscarPorPacienteId/"+idpaciente1)
     .then((resp) => {this.Citadata = resp.data
     }).catch((error) => console.log(error));
   }

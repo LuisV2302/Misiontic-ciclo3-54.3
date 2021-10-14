@@ -4,16 +4,15 @@
       <div class="content container">
         <div class="col-md-5 ml-auto mr-auto" id="Horario">
             <h4 id="h4x">Horario disponible</h4>
-            <vue-timepicker class="Hora" :format="yourFormat" v-model="unsetStringValue" placeholder="Start Time"></vue-timepicker>
+            <vue-timepicker class="Hora" :format="yourFormat" v-model="unsetStringValue" placeholder="Inicio"></vue-timepicker>
             <span class="thi"> Hasta </span>
-            <vue-timepicker class="Hora" :format="yourFormat" v-model="unsetStringValue" placeholder="End Time"></vue-timepicker>
+            <vue-timepicker class="Hora" :format="yourFormat" v-model="unsetStringValue" placeholder="Ultimo"></vue-timepicker>
             <div class="container-fluid">
-              <h4 id="h4x">Valor minimo</h4>
-              <input id="Precio"
-              class="no-border show-input input-lg"
-              addon-left-icon="now-ui-icons text_caps-small"
-              placeholder="Precio de la cita"
-            > 
+              <a
+                  href="#"
+                  class="btn btn-info btn-round btn-lg btn-block"
+                  id="bt">Agregar horario</a
+                >
             </div>
         </div>
       <div class="container">
@@ -93,7 +92,9 @@ export default {
 .thi{
   padding: 0px 10px 0 10px;
 }
-#Precio{
-  width: 87%;
+
+#bt{
+  margin-top: 20px;
+  margin-bottom: -10px;
 }
 </style>

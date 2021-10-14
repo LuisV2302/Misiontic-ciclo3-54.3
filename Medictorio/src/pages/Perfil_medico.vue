@@ -11,8 +11,8 @@
         </div>
         <h3 class="title"> {{ Medicodata.nombre }}</h3>
         <div class="content">
-          <div v-for="precio in Preciodata" :key="precio.id" class="social-description">
-            <h2 >{{ precio.precio }}</h2>
+          <div class="social-description">
+            <h2 >{{ Medicodata.precio }}</h2>
             <p>Precio de la cita</p>
           </div>
         </div>
@@ -85,23 +85,23 @@ export default {
     Tabs,
     TabPane
   },
-  props:['idMedico','precio'],
+  props:['idMedico'],
   data (){
         return {
         Medicodata: '',
-        Preciodata:'',
+        //Preciodata:'',
         }
     },
   created(){ 
-    let idmedico1 = '6166eb68fb4a711eda8f8777'; //id prueba
+    let idmedico1 = '6168a5a8bf31c35394525dc3'; //id prueba
     
     //alert("id del medico " + idmedico2);
-    axios.get("http://localhost:8000/medicos/buscarPorId/"+idmedico1)
+    axios.get("http://localhost:3000/medicos/buscarPorId/"+idmedico1)
     .then((res) => {this.Medicodata = res.data
     }).catch((error) => console.log(error));
-    axios.get("http://localhost:8000/citas/buscarPorMedicoId/"+idmedico1)
+   /* axios.get("http://localhost:8000/citas/buscarPorMedicoId/"+idmedico1)
     .then((resp) => {this.Preciodata = resp.data
-    }).catch((error) => console.log(error));
+    }).catch((error) => console.log(error));*/
     }
 };
 </script>

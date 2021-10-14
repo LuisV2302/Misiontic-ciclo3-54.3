@@ -7,61 +7,73 @@
     menu-classes="ml-auto"
   >
     <template>
-      <router-link v-popover:popover1 class="navbar-brand" to="/">
-        Medictorio
-      </router-link>
-      <el-popover
-        ref="popover1"
-        popper-class="popover"
-        placement="bottom"
-        width="200"
-        trigger="hover"
-      >
-        <div class="popover-body">
-          Designed by Ernesto.
-        </div>
-      </el-popover>
+      
+         <a href="">
+           <p>MEDICTORIO</p>
+           </a>
+
+ 
+      
     </template>
     <template slot="navbar-menu">
       <li class="nav-item">
         <a
           class="nav-link"
-          href="#/inicio"
+          href="/inicio#/inicio"
           target="_blank"
         >
-          <i class=""></i>
-          <p>Pagina principal</p>
+         
+          <p>Página principal</p>
         </a>
+
+        
       </li>
-      <li class="nav-item">
+
+<li class="nav-item">
         <a
           class="nav-link"
-          href="#/perfil_paciente"
+          href="/login#/login"
           target="_blank"
         >
-          <i class=""></i>
-          <p>Perfil</p>
+         
+          <p>Login</p>
         </a>
+
+        
       </li>
-      <drop-down
-              tag="li"
-              title="Cuenta"
-              class="nav-item"
-      >
-        <nav-link to="/Singup">
-          <i class="now-ui-icons emoticons_satisfied"></i> Sign up
-        </nav-link>
-        <nav-link to="/login">
-          <i class="now-ui-icons users_single-02"></i> Login
-        </nav-link>
-      </drop-down>
+
+
+<li class="nav-item">
+        <a
+          class="nav-link"
+          href="/registro#/registro"
+          target="_blank"
+        >
+         
+          <p>Sign Up</p>
+        </a>
+
+        
+      </li>
+<li class="nav-item">
+        <a
+          class="nav-link"
+          href="/Perfil_paciente#/Perfil_paciente"
+          target="_blank"
+        >
+         
+          <p>PERFIL</p>
+        </a>
+
+
+     
       <li class="nav-item">
         <a
           class="nav-link"
           rel="tooltip"
           title="Follow us on Twitter"
           data-placement="bottom"
-          href="https://twitter.com/"
+          href="https://twitter.com/CreativeTim"
           target="_blank"
         >
           <i class="fab fa-twitter"></i>
@@ -74,7 +86,7 @@
           rel="tooltip"
           title="Like us on Facebook"
           data-placement="bottom"
-          href="https://www.facebook.com/"
+          href="https://www.facebook.com/CreativeTim"
           target="_blank"
         >
           <i class="fab fa-facebook-square"></i>
@@ -87,7 +99,7 @@
           rel="tooltip"
           title="Follow us on Instagram"
           data-placement="bottom"
-          href="https://www.instagram.com/"
+          href="https://www.instagram.com/CreativeTimOfficial"
           target="_blank"
         >
           <i class="fab fa-instagram"></i>
@@ -108,9 +120,9 @@ export default {
     colorOnScroll: Number
   },
   components: {
-    DropDown,
+  
     Navbar,
-    NavLink,
+  
     [Popover.name]: Popover
   }
 };

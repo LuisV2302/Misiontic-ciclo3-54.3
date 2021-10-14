@@ -18,7 +18,7 @@
           navMenuClasses
         ]"
         v-if="$slots['navbar-menu'] || $scopedSlots['navbar-menu']"
-        data-color="orange"
+        data-color="#1687a7"
         id="navigation"
       >
         <slot name="before-menu"></slot>

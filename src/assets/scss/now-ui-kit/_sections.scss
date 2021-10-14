@@ -11,6 +11,12 @@
     padding-bottom: 0;
 }
 
+#logoup{
+    width: 50%;
+    height: 50%;
+}
+
+
 .section-full-screen{
     height: 100vh;
 }
@@ -19,6 +25,8 @@
 }
 
 .page-header{
+ background: linear-gradient(rgba(39,102,120,1) 0%,
+    rgba(211,224,234,1) 80%, rgba(246,245,245,1) 100%);;
   min-height: 100vh;
   max-height: 999px;
   padding: 0;
@@ -410,4 +418,25 @@
     &.section-nucleo-icons .icons-container i:nth-child(6){
         color: $white-color;
     }
+}
+
+ul{
+    list-style-type: disc;
+}
+#Lista{
+    font-weight: bold;
+    align-content: center;
+}
+
+#Lista #Elementos{
+    font-weight: normal;
+    position: relative;
+    display: block;
+    padding: 0.75rem 1.25rem;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+#usuarios{
+    padding: 15px 0px 10px 0px;
 }

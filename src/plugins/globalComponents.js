@@ -1,11 +1,10 @@
 import { Parallax } from '../components';
-/**
- * You can register global components here
- */
+import VueDatepickerUi from 'vue-datepicker-ui'
+import 'vue-datepicker-ui/lib/vuedatepickerui.css';
 
 const globalComponents = {
   install(Vue) {
-    Vue.component(Parallax.name, Parallax);
+    Vue.component(Parallax.name, Parallax, 'Datepicker', VueDatepickerUi);
   }
 };
 

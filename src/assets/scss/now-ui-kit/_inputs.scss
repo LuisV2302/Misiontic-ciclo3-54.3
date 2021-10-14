@@ -116,6 +116,10 @@
     .form-control + .input-group-text{
         background-color: $opacity-gray-3;
         border: medium none;
+        width: auto;
+        height: 80%;
+        margin-top: 10px;
+          
         &:focus,
         &:active,
         &:active{

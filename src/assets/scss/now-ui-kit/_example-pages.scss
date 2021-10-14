@@ -20,18 +20,16 @@
     }
 }
 .landing-page{
-    background: linear-gradient(rgba(39,102,120,1) 0%,
-         rgba(211,224,234,1) 80%, rgba(246,245,245,1) 100%);
+
     .header{
         height: 100vh;
         position: relative;
 
         .container{
             padding-top: 26vh;
+            color: #FFFFFF;
             z-index: 2;
             position: relative;
-            background: linear-gradient(rgba(39,102,120,1) 0%,
-         rgba(211,224,234,1) 80%, rgba(246,245,245,1) 100%);
         }
 
         .share{
@@ -85,14 +83,17 @@
 
     .page-header{
         min-height: 550px;
+        background: rgb(22,135,167);
+        background: linear-gradient(rgba(22,135,167,1) 0%,
+         rgba(211,224,234,1) 50%, rgba(246,245,245,1) 100%);
     }
 
     .profile-container{
         color: #FFFFFF;
     }
     .photo-container{
-        width: 123px;
-        height: 123px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
         overflow: hidden;
         margin: 0 auto;
@@ -130,7 +131,9 @@
             margin: 15px 0 0px;
 
             h2{
-                margin-bottom: 15px;
+                margin-bottom: 5px;
+                margin-top: 10px;
+                font-size: 190%;
             }
         }
     }

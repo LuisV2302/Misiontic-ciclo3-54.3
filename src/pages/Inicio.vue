@@ -3,14 +3,13 @@
     <div class="page-header page-header-small">
       <parallax
         class="page-header-image"
-        style="background-image: url('img/bg6.jpg')"
+        style="background-image: url(img/bg6.jpg)"
       >
       </parallax>
       <div class="content-center">
         <div class="container d-flex justify-content-center"  id="contenedorPrincipal">
-          <h1 class="title">Bienvenido a Medictorio</h1>
-          <br>
-          <select id="seleccion" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+          <h1 class="title embed-responsive">Bienvenido a Medictorio</h1>
+          <select id="seleccion" class="form-select form-select-lg mb-3 embed-responsive" aria-label=".form-select-lg example">
             <option selected="opt1">Filtra tus opciones</option>
             <option value="opt2">Precio</option>
             <option value="opt3">Especialidad</option>
@@ -18,7 +17,9 @@
             <option value="opt5">Ciudad</option>
 
         </select>
-        <n-button type="primary" round block size="mini" id="botonbuscar" class="button center">Buscar</n-button>
+        <a href="#/listamedicos" id="botonbuscar">
+        <n-button type="primary" round block size="mini" id="botonbuscar" class="button center embed-responsive">Buscar</n-button>
+        </a>
         </div>
       </div>
     </div>
@@ -37,23 +38,22 @@
           </div>
         </div>
         <div class="separator separator-primary"></div>
-
       </div>
     </div>
     <div class="section section-contact-us text-center">
       <div class="container">
-        <h2 class="title">¿tienes preguntas?</h2>
+        <h2 class="title">¿Tienes preguntas?</h2>
         <p class="description">Escríbenos</p>
         <div class="row">
           <div class="col-lg-6 text-center ml-auto mr-auto col-md-8">
-            <fg-input
+            <fg-input id="Loginicon"
               class="input-lg"
               placeholder="Escribe tu nombre"
               v-model="form.firstName"
               addon-left-icon="now-ui-icons users_circle-08"
             >
             </fg-input>
-            <fg-input
+            <fg-input  id="Loginicon"
               class="input-lg"
               placeholder="Escribe tu correo"
               v-model="form.email"
@@ -72,7 +72,7 @@
             </div>
             <div class="send-button">
               <n-button type="primary" round block size="lg"
-                >enviar mensaje</n-button
+                >Enviar mensaje</n-button
               >
             </div>
           </div>
@@ -103,19 +103,24 @@ export default {
 </script>
 <style>
   #seleccion{
-    width: 60%;
+    
     box-shadow: -4px 4px 7px -2px rgba(0,0,0,0.75);
-    margin-top: 13px;
-    margin-right: 15px;
+    margin: 13px 15px 0px 50px;
+    max-width: 30%;
+    min-width: 40%;
   }
   #botonbuscar{
-    width: 20%;
+    width: auto;
     align-self: center;
   }
   #contenedorPrincipal{
     align-items: center;
     align-content: center;
   }
-
+#Loginicon{
+  width: auto;
+  height: 80%;
+  margin-top: 10px;
+}
 
 </style>

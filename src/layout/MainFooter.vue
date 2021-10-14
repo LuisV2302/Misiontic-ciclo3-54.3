@@ -8,11 +8,16 @@
       <nav>
         <ul>
           <li>
-              <strong class="Email">Email:</strong>
+            <a href>
+              Contacto
+            </a>
           </li>
           <li>
-              Medictorio@gmail.com
+            <a href="https:/// medictorio@gmail.com">
+              medictorio@gmail.com
+            </a>
           </li>
+     
         </ul>
       </nav>
       <div class="copyright">
@@ -44,8 +49,4 @@ export default {
   }
 };
 </script>
-<style>
-.Email{
-  padding-right: 18px;
-}
-</style>
+<style></style>

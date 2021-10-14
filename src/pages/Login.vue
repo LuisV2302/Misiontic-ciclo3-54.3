@@ -1,69 +1,88 @@
 <template>
-  <div class="page-header clear-filter" filter-color="orange">
+  <div class="page-header clear-filter" >
     <div
       class="page-header-image"
-      style="background-image: url('img/login.jpg')"
+         style="background-color:white"
     ></div>
     <div class="content">
       <div class="container">
         <div class="col-md-5 ml-auto mr-auto">
           <card type="login" plain>
-            <div slot="header" class="logo-container">
-              <img v-lazy="'img/now-logo.png'" alt="" />
+            <div slot="header" class="logo-container" id="logoup">
+              <img v-lazy="'./Logo_Mesa de trabajo 1.png'" id="logoup1" alt="" />
             </div>
 
-            <fg-input
+            <fg-input id="Loginicon"
               class="no-border input-lg"
               addon-left-icon="now-ui-icons users_circle-08"
-              placeholder="First Name..."
+              placeholder="Usuario"
             >
             </fg-input>
 
-            <fg-input
+            <fg-input id="Loginicon"
               class="no-border input-lg"
               addon-left-icon="now-ui-icons text_caps-small"
-              placeholder="Last Name..."
+              placeholder="Contraseña"
             >
             </fg-input>
-
-            <template slot="raw-content">
-              <div class="card-footer text-center">
+              <div class="card-footer text-center" >
                 <a
-                  href="#pablo"
+                  href="#"
                   class="btn btn-primary btn-round btn-lg btn-block"
-                  >Get Started</a
+                  id="bt">Ingresar</a
                 >
               </div>
               <div class="pull-left">
                 <h6>
-                  <a href="#pablo" class="link footer-link">Create Account</a>
+                  <a href="#" id="textbottom" class="link footer-link">Registrarse</a>
                 </h6>
               </div>
               <div class="pull-right">
                 <h6>
-                  <a href="#pablo" class="link footer-link">Need Help?</a>
+                  <a href="#" id="textbottom1" class="link footer-link">Ayuda</a>
                 </h6>
               </div>
-            </template>
           </card>
         </div>
       </div>
     </div>
-    <main-footer></main-footer>
   </div>
 </template>
 <script>
 import { Card, Button, FormGroupInput } from '@/components';
-import MainFooter from '@/layout/MainFooter';
+
 export default {
   name: 'login-page',
   bodyClass: 'login-page',
   components: {
     Card,
-    MainFooter,
     [Button.name]: Button,
     [FormGroupInput.name]: FormGroupInput
   }
 };
 </script>
-<style></style>
+<style>
+.page-header-image{
+  background: linear-gradient(rgba(39,102,120,1) 0%,rgba(211,224,234,1) 80%, rgba(246,245,245,1) 100%);
+}
+.btn-lg btn-block{
+  color:rgba(39,102,120,1);
+}
+#textbottom{
+  margin-left: 10px;
+  font-size: 100%;
+}
+#textbottom1{
+  margin-right: 12px;
+  font-size: 100%;
+}
+#bt{
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+#Loginicon{
+  width: auto;
+  height: 80%;
+  margin-top: 10px;
+}
+</style>

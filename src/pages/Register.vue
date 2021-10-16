@@ -186,7 +186,6 @@ export default {
         axios
           .post("https://vast-forest-78933.herokuapp.com/api/auth/register/", medico)
           .then(() => {
-            console.log("medico agregado");
             this.$router.push({
               name: "login" 
             });
@@ -205,12 +204,10 @@ export default {
         axios
           .post("https://vast-forest-78933.herokuapp.com/api/auth/register/", paciente)
           .then(() => {
-            console.log("paciente agregado");
             this.$router.push({
               name: "login" 
             });
           })
-          .catch((err) => console.log(err));
       }
     },
   },

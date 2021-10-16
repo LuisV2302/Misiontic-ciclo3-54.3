@@ -198,7 +198,7 @@ export default {
       .then((res) => {
         this.Medicodata = res.data;
       })
-      .catch((error) => console.log(error));
+      .catch((error) => this.Medicodata= error);
   },
   methods: {
     agendarCita(){

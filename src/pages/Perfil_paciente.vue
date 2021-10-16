@@ -95,7 +95,6 @@ export default {
       .then((res) => {
         this.Pacientedata = res.data;
       })
-      .catch((error) => console.log(error));
 
     axios
       .get(
@@ -105,7 +104,6 @@ export default {
       .then((resp) => {
         this.Citadata = resp.data;
       })
-      .catch((error) => console.log(error));
   },
   methods: {
     verMedicos() {

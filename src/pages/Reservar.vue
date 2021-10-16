@@ -81,10 +81,9 @@ export default {
   },
   methods: {
     methodenviaraBackend() {
-      console.log(this.citas)
       axios
         .post("https://vast-forest-78933.herokuapp.com/citas/crear", this.citas)
-        .then(() => console.log("agendamiento creado"));
+        .then(() => alert("cita creada"));
     },
   },
 };

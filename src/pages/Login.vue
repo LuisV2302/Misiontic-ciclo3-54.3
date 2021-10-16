@@ -30,6 +30,7 @@
             </fg-input>
 
             <fg-input
+              type= "password"
               id="Loginicon"
               class="no-border input-lg"
               addon-left-icon="now-ui-icons text_caps-small"
